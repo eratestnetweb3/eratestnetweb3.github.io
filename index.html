@@ -179,6 +179,19 @@
       .style-card.active { border-color: var(--accent); box-shadow: 0 0 0 1.5px var(--accent); }
       .style-card.active .in-use { color: var(--accent-strong); font-weight: 700; font-size: .85rem; }
 
+      /* ---------- Toolkit & pustaka ---------- */
+      .tool-group { margin-top: 14px; }
+      .tool-group h3 { margin: 0 0 8px; font-size: .82rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-strong); }
+      .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .tool-grid .option { min-height: 44px; padding: 8px 12px; font-size: .9rem; }
+      .skill-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      .skill-card h3 { margin: 0; font-size: 1rem; line-height: 1.3; }
+      .skill-card p { margin: 0; color: var(--ink-2); font-size: .88rem; flex: 1; }
+      .skill-cat { align-self: flex-start; background: var(--accent-soft); color: var(--accent-strong); border-radius: 7px; padding: 3px 9px; font-size: .76rem; font-weight: 700; }
+      .skill-link { color: var(--accent-strong); font-weight: 700; font-size: .9rem; text-decoration: none; }
+      .skill-link:hover { text-decoration: underline; }
+      @media (max-width: 520px) { .tool-grid { grid-template-columns: 1fr; } }
+
       footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: .9rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
       footer strong { color: var(--ink); }
 
@@ -202,10 +215,11 @@
       <header class="hero">
         <div>
           <h1>Prompt Generator<br /><span class="serif">Video 3D</span></h1>
-          <p>Kamu bisa pilih <strong>video 3D</strong> berbagai gaya. Total <mark><strong>36 gaya</strong></mark>, setiap video bisa menggabungkan sampai <mark><strong>3 gaya</strong></mark>. Isi formulirnya, prompt lengkap berbahasa Indonesia langsung jadi dan siap disalin ke ChatGPT atau Gemini.</p>
+          <p>Kamu bisa pilih <strong>video 3D</strong> berbagai gaya. Total <mark><strong>36 gaya</strong></mark>, setiap video bisa menggabungkan sampai <mark><strong>3 gaya</strong></mark>, dan didukung <mark><strong>20 pustaka &amp; skill</strong></mark> produksi yang bisa kamu centang masuk ke prompt. Isi formulirnya, prompt lengkap berbahasa Indonesia langsung jadi dan siap disalin ke ChatGPT atau Gemini.</p>
           <div class="hero-actions">
             <a class="btn" href="#formulir">Buat prompt</a>
             <a class="btn ghost" href="#galeri">Lihat 36 gaya</a>
+            <a class="btn ghost" href="#pustaka">Pustaka &amp; skill</a>
           </div>
         </div>
         <figure class="preview-card" style="margin:0">
@@ -397,6 +411,17 @@
             <textarea id="adeganWajib" placeholder="Contoh: Jembatan terlipat terbuka dari kedua tebing, kemudian kamera melintas di atasnya."></textarea>
           </section>
 
+          <!-- Toolkit produksi -->
+          <section class="card">
+            <div class="card-head">
+              <h2>Toolkit <span class="serif">produksi</span></h2>
+              <span class="optional-tag">Opsional</span>
+            </div>
+            <p class="sub">Centang skill dan pustaka yang mau dipakai. Pilihanmu otomatis tertulis di dalam prompt, lengkap dengan tugas masing-masing tool.</p>
+            <div id="toolkitGroups"></div>
+            <p class="hint">Daftar lengkap beserta tautan sumbernya ada di bagian <a href="#pustaka" style="color:var(--accent-strong);font-weight:600">Pustaka &amp; Skill</a> di bawah.</p>
+          </section>
+
           <div class="form-foot">
             <span class="wajib">* Wajib diisi</span>
             <button type="button" class="link-btn" id="resetBtn">Reset formulir</button>
@@ -423,9 +448,14 @@
       <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">Semua gaya di bawah ini bisa jadi gaya utama. Klik tombol pada salah satu kartu untuk langsung memakainya di formulir.</p>
       <div class="gallery-grid" id="gallery"></div>
 
+      <!-- ================= PUSTAKA & SKILL ================= -->
+      <h2 class="section-title" id="pustaka">Pustaka &amp; <span class="serif">Skill</span></h2>
+      <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">20 skill dan pustaka pendukung produksi video. Centang yang kamu mau di bagian Toolkit produksi pada formulir, dan semuanya tertulis otomatis di dalam prompt. Klik tautan sumber untuk membuka repositori atau dokumentasi resminya.</p>
+      <div class="gallery-grid" id="skillGrid"></div>
+
       <footer>
         <span><strong>Prompt Generator Video 3D</strong> · Susun prompt video Three.js, salin, lalu produksi di ChatGPT atau Gemini.</span>
-        <span>36 gaya · gabung sampai 3 gaya per video</span>
+        <span>36 gaya · 20 pustaka &amp; skill · gabung sampai 3 gaya per video</span>
       </footer>
     </div>
 
@@ -470,6 +500,31 @@
         { nama: "Perjalanan Waktu Sejarah", desc: "Satu lokasi yang berubah melewati zaman: masa lalu, masa kini, dalam satu jalur kamera.", arahan: "lokasi yang sama bertransformasi melewati beberapa era sejarah", warna: ["#9c6644", "#606c38", "#283618"] },
         { nama: "Hamparan AR (Augmented Reality)", desc: "Objek 3D virtual menempel di atas dunia nyata dengan penanda dan panel data digital.", arahan: "objek virtual menempel di lingkungan nyata dengan penanda AR dan panel data", warna: ["#00f5d4", "#fee440", "#9b5de5"] }
       ];
+
+      /* ================= DATA 20 PUSTAKA & SKILL ================= */
+      var TOOLS = [
+        { nama: "Motion", kategori: "Animasi & Gerak", desc: "Pustaka animasi modern untuk web: easing, spring, dan timeline gerakan yang halus untuk elemen UI dan adegan.", peran: "animasi elemen dan transisi adegan dengan easing dan spring yang halus", url: "https://github.com/motiondivision/motion" },
+        { nama: "Motion Design Skill (LottieFiles)", kategori: "Skill AI", desc: "Skill resmi LottieFiles yang mengajarkan agent AI prinsip motion design: timing, easing, dan koreografi gerakan.", peran: "panduan prinsip motion design (timing, easing, koreografi gerakan) untuk agent", url: "https://github.com/LottieFiles/motion-design-skill" },
+        { nama: "Remotion Skills", kategori: "Skill AI", desc: "Kumpulan skill resmi Remotion agar agent AI bisa menyusun video programatik berbasis React dengan benar.", peran: "panduan resmi agar agent menyusun video Remotion dengan pola yang benar", url: "https://github.com/remotion-dev/skills" },
+        { nama: "Hairline Skills", kategori: "Skill AI", desc: "Kumpulan skill desain dan animasi dari Hairline untuk membantu agent menghasilkan gerakan dan tata letak yang rapi.", peran: "skill desain dan animasi pendukung untuk agent", url: "https://hairline.lucasmarkes.com/skills" },
+        { nama: "Anatomy Skill", kategori: "Skill AI", desc: "Skill yang memetakan anatomi sebuah adegan atau komposisi, supaya struktur visualnya jelas sebelum dianimasikan.", peran: "memetakan anatomi dan struktur komposisi adegan sebelum dianimasikan", url: "https://skills.wheresryan.sh/anatomy" },
+        { nama: "Anatomy Reveal Skill", kategori: "Skill AI", desc: "Skill untuk adegan reveal anatomi: membuka lapisan objek satu per satu, cocok untuk video edukasi sains dan kesehatan.", peran: "adegan reveal anatomi yang membuka lapisan objek satu per satu", url: "https://www.typingmind.com/skills/annnguyentt-anatomy-reveal" },
+        { nama: "Blender", kategori: "3D & Efek", desc: "Software 3D open-source lengkap: modeling, rigging, animasi, dan render untuk aset atau adegan yang lebih kompleks.", peran: "modeling dan render aset 3D kompleks yang tidak praktis dibuat langsung di kode", url: "https://github.com/blender/blender" },
+        { nama: "Three.js", kategori: "3D & Efek", desc: "Pustaka 3D utama untuk web berbasis WebGL. Semua adegan video di generator ini dibangun dengan Three.js.", peran: "mesin utama pembangunan scene 3D, model, material, pencahayaan, dan kamera", url: "https://github.com/mrdoob/three.js", bawaan: true },
+        { nama: "React Three Rapier", kategori: "3D & Efek", desc: "Mesin fisika Rapier untuk React Three Fiber: gravitasi, tumbukan, dan rigid body di dalam adegan 3D.", peran: "simulasi fisika (gravitasi, tumbukan, rigid body) di dalam adegan 3D", url: "https://github.com/pmndrs/react-three-rapier" },
+        { nama: "React Postprocessing", kategori: "3D & Efek", desc: "Efek post-processing untuk React Three Fiber: bloom, depth of field, vignette, dan grading akhir.", peran: "efek post-processing seperti bloom, depth of field, dan vignette", url: "https://github.com/pmndrs/react-postprocessing" },
+        { nama: "three.quarks", kategori: "3D & Efek", desc: "Sistem partikel berperforma tinggi untuk Three.js: asap, percikan, hujan, gelembung, dan efek partikel lain.", peran: "efek partikel seperti asap, percikan, hujan, dan gelembung", url: "https://github.com/Alchemist0823/three.quarks" },
+        { nama: "Tweakpane", kategori: "3D & Efek", desc: "Panel kontrol parameter yang ringkas untuk mengatur nilai adegan secara langsung saat proses tuning dan debug.", peran: "panel kontrol untuk men-tuning parameter adegan secara langsung", url: "https://github.com/cocopon/tweakpane" },
+        { nama: "GSAP", kategori: "Animasi & Gerak", desc: "Pustaka animasi profesional dari GreenSock: timeline presisi, ScrollTrigger, dan kontrol gerakan tingkat lanjut.", peran: "timeline animasi presisi dan sinkronisasi gerakan antar elemen", url: "https://github.com/greensock/GSAP", bawaan: true },
+        { nama: "Remotion", kategori: "Video & Audio", desc: "Framework membuat video secara programatik dengan React: komposisi, teks, dan render MP4 dari kode.", peran: "komposisi dan render video programatik berbasis React", url: "https://github.com/remotion-dev/remotion" },
+        { nama: "Manim", kategori: "Video & Audio", desc: "Mesin animasi Python dari komunitas Manim untuk animasi matematika dan penjelasan konsep yang presisi.", peran: "animasi matematika dan diagram konsep yang presisi", url: "https://github.com/ManimCommunity/manim" },
+        { nama: "Lottie Web", kategori: "Animasi & Gerak", desc: "Pemutar animasi Lottie dari Airbnb: menjalankan animasi vektor JSON (dari After Effects/Bodymovin) di web.", peran: "memutar animasi vektor Lottie (ikon, logo, elemen UI) di dalam adegan", url: "https://github.com/airbnb/lottie-web" },
+        { nama: "Openverse API", kategori: "Video & Audio", desc: "API katalog aset bebas lisensi dari WordPress: jutaan gambar dan audio open-license untuk materi pendukung.", peran: "sumber gambar dan audio bebas lisensi untuk materi pendukung", url: "https://api.openverse.org/v1/" },
+        { nama: "librosa", kategori: "Video & Audio", desc: "Pustaka Python untuk analisis musik dan audio: beat tracking, tempo, dan fitur audio untuk sinkronisasi visual.", peran: "analisis audio dan beat tracking agar gerakan visual selaras dengan musik", url: "https://github.com/librosa/librosa" },
+        { nama: "WhisperX", kategori: "Video & Audio", desc: "Transkripsi suara presisi berbasis Whisper dengan alignment per kata, untuk subtitle yang akurat dan tepat waktu.", peran: "transkripsi narasi dan pembuatan subtitle dengan timing per kata", url: "https://github.com/m-bain/whisperX" },
+        { nama: "FFmpeg", kategori: "Video & Audio", desc: "Perkakas multimedia serbaguna: menggabungkan frame dan audio, encode, dan render file video final.", peran: "penggabungan frame dan audio serta encode file video final", url: "https://github.com/FFmpeg/FFmpeg", bawaan: true }
+      ];
+      var KATEGORI_TOOL = ["Skill AI", "Animasi & Gerak", "3D & Efek", "Video & Audio"];
 
       /* ================= ELEMEN ================= */
       function el(id) { return document.getElementById(id); }
@@ -591,6 +646,16 @@
         baris.push("- Gerakan kamera: " + el("kamera").value.toLowerCase());
         baris.push("- Adegan, properti, atau aksi wajib: " + (el("adeganWajib").value.trim() || "tidak ada ketentuan khusus"));
         baris.push("");
+        baris.push("TOOLKIT PRODUKSI");
+        var toolsDipilih = [];
+        document.querySelectorAll(".tool-check:checked").forEach(function (c) { toolsDipilih.push(TOOLS[parseInt(c.value, 10)]); });
+        if (toolsDipilih.length) {
+          baris.push("Gunakan skill dan pustaka berikut, masing-masing sesuai tugasnya:");
+          toolsDipilih.forEach(function (t) { baris.push("- " + t.nama + ": " + t.peran + "."); });
+        } else {
+          baris.push("Tidak ada toolkit khusus yang ditentukan; gunakan Three.js sebagai mesin 3D utama dan FFmpeg untuk render final.");
+        }
+        baris.push("");
         baris.push("LANGKAH PRODUKSI");
         baris.push("1. Tulis naskah narasi dan bagi menjadi adegan-adegan sesuai durasi total.");
         baris.push("2. Bangun setiap adegan sebagai scene Three.js: model 3D, material, pencahayaan, dan animasi subjek. Bukan slideshow gambar diam.");
@@ -602,7 +667,7 @@
           teks: baris.join("\n"),
           platform: platform,
           utama: utama,
-          chips: [utama.nama, aspek, resKey, fps + " fps", total ? total + " detik" : "durasi?"],
+          chips: [utama.nama, aspek, resKey, fps + " fps", total ? total + " detik" : "durasi?", toolsDipilih.length ? toolsDipilih.length + " tool" : "tanpa toolkit"],
           total: total,
           dims: dims
         };
@@ -675,6 +740,54 @@
         });
       }
 
+      /* ================= TOOLKIT & KATALOG SKILL ================= */
+      function bangunToolkit() {
+        var wadah = el("toolkitGroups");
+        KATEGORI_TOOL.forEach(function (kat) {
+          var grup = document.createElement("div");
+          grup.className = "tool-group";
+          var judulGrup = document.createElement("h3");
+          judulGrup.textContent = kat;
+          grup.appendChild(judulGrup);
+          var grid = document.createElement("div");
+          grid.className = "tool-grid";
+          TOOLS.forEach(function (t, i) {
+            if (t.kategori !== kat) return;
+            var label = document.createElement("label");
+            label.className = "option";
+            var cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.className = "tool-check";
+            cb.value = i;
+            if (t.bawaan) { cb.checked = true; cb.defaultChecked = true; }
+            label.appendChild(cb);
+            label.appendChild(document.createTextNode(t.nama));
+            grid.appendChild(label);
+          });
+          grup.appendChild(grid);
+          wadah.appendChild(grup);
+        });
+      }
+
+      function bangunKatalogSkill() {
+        var grid = el("skillGrid");
+        TOOLS.forEach(function (t) {
+          var card = document.createElement("article");
+          card.className = "skill-card";
+          var kat = document.createElement("span");
+          kat.className = "skill-cat"; kat.textContent = t.kategori;
+          var h = document.createElement("h3");
+          h.textContent = t.nama;
+          var p = document.createElement("p");
+          p.textContent = t.desc;
+          var a = document.createElement("a");
+          a.className = "skill-link"; a.href = t.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+          a.textContent = "Lihat sumber ↗";
+          card.appendChild(kat); card.appendChild(h); card.appendChild(p); card.appendChild(a);
+          grid.appendChild(card);
+        });
+      }
+
       /* ================= AKSI ================= */
       el("copyBtn").addEventListener("click", function () {
         var teks = el("promptBox").textContent;
@@ -716,6 +829,8 @@
 
       isiPilihanGaya();
       bangunGaleri();
+      bangunToolkit();
+      bangunKatalogSkill();
       perbarui();
     </script>
 
