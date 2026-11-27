@@ -234,7 +234,7 @@
       <header class="hero">
         <div>
           <h1>Prompt Generator<br /><span class="serif">Video 3D</span></h1>
-          <p>Kamu bisa pilih <strong>video 3D</strong> berbagai gaya. Total <mark><strong>36 gaya</strong></mark>, setiap video bisa menggabungkan sampai <mark><strong>3 gaya</strong></mark>, dan didukung <mark><strong>20 pustaka &amp; skill</strong></mark> produksi yang bisa kamu centang masuk ke prompt. Isi formulirnya, prompt lengkap berbahasa Indonesia langsung jadi dan siap disalin ke ChatGPT, Gemini, atau Muse.</p>
+          <p>Di sini kamu bisa meracik prompt untuk <strong>video 3D</strong> dengan <mark><strong>36 pilihan gaya</strong></mark>, dan satu video boleh memadukan sampai <mark><strong>3 gaya</strong></mark> sekaligus. Ada juga <mark><strong>20 pustaka &amp; skill</strong></mark> produksi yang bisa kamu ikutkan ke dalam prompt. Tinggal isi formulirnya, prompt lengkap dalam Bahasa Indonesia langsung jadi dan siap kamu salin ke ChatGPT, Gemini, atau Muse.</p>
           <div class="hero-actions">
             <a class="btn" href="#formulir">Buat prompt</a>
             <a class="btn ghost" href="#galeri">Lihat 36 gaya</a>
@@ -243,14 +243,14 @@
         </div>
         <figure class="preview-card" style="margin:0">
           <div class="preview-stage" id="previewStage">
-            <div class="preview-error" id="previewError">Pratinjau 3D tidak bisa dimuat di perangkat ini, tapi generator prompt di bawah tetap berfungsi penuh.</div>
+            <div class="preview-error" id="previewError">Pratinjau 3D-nya tidak bisa tampil di perangkat ini, tapi tenang, generator prompt di bawah tetap bisa dipakai seperti biasa.</div>
           </div>
           <figcaption class="preview-caption">
             <div class="row">
               <h3 id="previewTitle">Diorama sungai</h3>
               <span class="dur" id="previewDur">2 menit</span>
             </div>
-            <p id="previewDesc">Rumah dan jembatan tampil mengikuti jalur kamera yang menyusuri sungai. Pratinjau 3D ini berputar langsung di browser kamu.</p>
+            <p id="previewDesc">Kamera bergerak menyusuri sungai, melewati rumah-rumah dan jembatan kecil. Pratinjau 3D-nya berputar langsung di browser kamu.</p>
           </figcaption>
         </figure>
       </header>
@@ -263,25 +263,25 @@
           <!-- Proyek video -->
           <section class="card">
             <h2>Proyek video</h2>
-            <label class="field-label" style="margin-top:10px">Platform tujuan prompt</label>
-            <div class="option-grid" role="radiogroup" aria-label="Platform tujuan prompt">
+            <label class="field-label" style="margin-top:10px">Prompt ini mau dipakai di</label>
+            <div class="option-grid" role="radiogroup" aria-label="Prompt ini mau dipakai di">
               <label class="option"><input type="radio" name="platform" value="ChatGPT" checked /> ChatGPT</label>
               <label class="option"><input type="radio" name="platform" value="Gemini" /> Gemini</label>
               <label class="option"><input type="radio" name="platform" value="Muse" /> Muse</label>
             </div>
 
             <label class="field-label" for="judul">Judul atau topik <span class="req">*</span></label>
-            <input type="text" id="judul" placeholder="Contoh: Bagaimana jembatan dibangun di atas laut?" />
+            <input type="text" id="judul" placeholder="Contoh: Bagaimana cara jembatan dibangun di atas laut?" />
 
             <label class="field-label" for="target">Target penonton dan tujuan <span class="req">*</span></label>
-            <textarea id="target" placeholder="Contoh: Siswa kelas 5 SD memahami bagaimana tiang menopang jembatan."></textarea>
+            <textarea id="target" placeholder="Contoh: Anak kelas 5 SD jadi paham cara tiang menopang jembatan."></textarea>
           </section>
 
           <!-- Gaya -->
           <section class="card">
             <div class="card-head">
               <h2>Gaya <span class="serif">Three.js</span></h2>
-              <a class="btn ghost small" href="#galeri">Pratinjau 36 gaya</a>
+              <a class="btn ghost small" href="#galeri">Lihat 36 gaya</a>
             </div>
             <label class="field-label" for="gayaUtama">Gaya utama</label>
             <select id="gayaUtama"></select>
@@ -296,7 +296,7 @@
                 <select id="gayaPendukung2"></select>
               </div>
             </div>
-            <p class="hint">Gaya pendukung dipakai sebagai aksen visual. Kalau sama dengan gaya utama, otomatis dilewati.</p>
+            <p class="hint">Gaya pendukung sifatnya cuma aksen. Kalau kebetulan sama dengan gaya utama, nanti otomatis dilewatkan.</p>
 
             <div class="gaya-preview" id="gayaPreview">
               <div class="gp-stage" id="gpStage" aria-label="Contoh gambar gaya utama yang dipilih"></div>
@@ -314,7 +314,7 @@
           <!-- Sumber -->
           <section class="card">
             <h2>Sumber materi</h2>
-            <p class="sub">Kalau kamu hanya punya topik, biarkan semua pilihan kosong.</p>
+            <p class="sub">Kalau kamu cuma punya topik, kosongkan saja semua pilihan ini.</p>
             <div class="option-grid">
               <label class="option"><input type="checkbox" class="sumber" value="naskah atau catatan" /> Naskah / catatan</label>
               <label class="option"><input type="checkbox" class="sumber" value="dokumen PDF" /> PDF</label>
@@ -343,7 +343,7 @@
                     <option value="menit" selected>Menit</option>
                   </select>
                 </div>
-                <p class="hint" id="durasiHint">1 detik hingga 30 menit.</p>
+                <p class="hint" id="durasiHint">Bisa dari 1 detik sampai 30 menit.</p>
               </div>
               <div>
                 <label class="field-label" for="resolusi">Resolusi</label>
@@ -408,7 +408,7 @@
               <span class="optional-tag">Opsional</span>
             </div>
             <label class="field-label" for="suasana">Suasana (mood)</label>
-            <input type="text" id="suasana" placeholder="Contoh: Hujan malam, cahaya jendela kekuningan" />
+            <input type="text" id="suasana" placeholder="Contoh: Malam hujan, cahaya jendela yang hangat kekuningan" />
 
             <div class="two-col">
               <div>
@@ -440,7 +440,7 @@
             </div>
 
             <label class="field-label" for="adeganWajib">Adegan, properti, atau aksi wajib</label>
-            <textarea id="adeganWajib" placeholder="Contoh: Jembatan terlipat terbuka dari kedua tebing, kemudian kamera melintas di atasnya."></textarea>
+            <textarea id="adeganWajib" placeholder="Contoh: Jembatannya terbuka terlipat dari kedua tebing, lalu kamera melintas di atasnya."></textarea>
           </section>
 
           <!-- Toolkit produksi -->
@@ -449,9 +449,9 @@
               <h2>Toolkit <span class="serif">produksi</span></h2>
               <span class="optional-tag">Opsional</span>
             </div>
-            <p class="sub">Centang skill dan pustaka yang mau dipakai. Pilihanmu otomatis tertulis di dalam prompt, lengkap dengan tugas masing-masing tool.</p>
+            <p class="sub">Centang saja skill dan pustaka yang mau kamu pakai. Pilihanmu bakal otomatis tertulis di prompt, lengkap dengan tugas masing-masing tool.</p>
             <div id="toolkitGroups"></div>
-            <p class="hint">Daftar lengkap beserta tautan sumbernya ada di bagian <a href="#pustaka" style="color:var(--accent-strong);font-weight:600">Pustaka &amp; Skill</a> di bawah.</p>
+            <p class="hint">Daftar lengkapnya, berikut tautan sumbernya, ada di bagian <a href="#pustaka" style="color:var(--accent-strong);font-weight:600">Pustaka &amp; Skill</a> di bawah.</p>
           </section>
 
           <div class="form-foot">
@@ -463,7 +463,7 @@
         <!-- Output prompt -->
         <aside class="prompt-panel" aria-live="polite">
           <h2>Prompt untuk <span class="serif" id="platformName">ChatGPT</span></h2>
-          <p class="sub">Prompt berbahasa Indonesia ini diperbarui langsung saat kamu mengisi formulir.</p>
+          <p class="sub">Prompt ini langsung berubah mengikuti isian formulirmu, jadi tidak perlu menunggu.</p>
           <div class="panel-thumb" id="panelThumb" aria-label="Contoh gambar gaya yang sedang dipilih"></div>
           <div class="chips" id="chips"></div>
           <pre class="prompt-box" id="promptBox"></pre>
@@ -472,23 +472,23 @@
             <button type="button" class="btn ghost" id="downloadBtn">Unduh .txt</button>
           </div>
           <p class="missing" id="missingNote"></p>
-          <p class="paste-hint" id="pasteHint">Tempel prompt ini di ChatGPT, lalu ikuti proses produksinya sampai file video selesai dirender.</p>
+          <p class="paste-hint" id="pasteHint">Tinggal tempel prompt ini di ChatGPT, lalu ikuti prosesnya sampai file videonya selesai dibuat.</p>
         </aside>
       </div>
 
       <!-- ================= GALERI GAYA ================= -->
       <h2 class="section-title" id="galeri">Galeri <span class="serif">36 gaya</span></h2>
-      <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">Setiap kartu dilengkapi contoh gambar visualnya, jadi kamu bisa melihat dulu bentuk animasi tiap gaya sebelum memilih. Klik tombol pada salah satu kartu untuk langsung memakainya di formulir.</p>
+      <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">Tiap kartu ada contoh gambarnya, jadi kamu bisa mengintip dulu seperti apa tampilan animasi tiap gaya sebelum menentukan pilihan. Kalau sudah sreg dengan satu gaya, klik tombol di kartunya untuk langsung memakainya di formulir.</p>
       <div class="gallery-grid" id="gallery"></div>
 
       <!-- ================= PUSTAKA & SKILL ================= -->
       <h2 class="section-title" id="pustaka">Pustaka &amp; <span class="serif">Skill</span></h2>
-      <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">20 skill dan pustaka pendukung produksi video. Centang yang kamu mau di bagian Toolkit produksi pada formulir, dan semuanya tertulis otomatis di dalam prompt. Klik tautan sumber untuk membuka repositori atau dokumentasi resminya.</p>
+      <p style="color:var(--ink-2);max-width:44em;margin:-6px 0 18px">Ada 20 skill dan pustaka yang bisa membantu proses produksi videomu. Centang yang kamu perlukan di bagian Toolkit produksi pada formulir, nanti semuanya otomatis tertulis di dalam prompt. Kalau mau tahu lebih jauh, klik tautan sumbernya untuk membuka repositori atau dokumentasi resminya.</p>
       <div class="gallery-grid" id="skillGrid"></div>
 
       <footer>
-        <span><strong>Prompt Generator Video 3D</strong> · Susun prompt video Three.js, salin, lalu produksi di ChatGPT, Gemini, atau Muse.</span>
-        <span>36 gaya · 20 pustaka &amp; skill · gabung sampai 3 gaya per video</span>
+        <span><strong>Prompt Generator Video 3D</strong> · Racik prompt video Three.js di sini, salin, lalu produksilah di ChatGPT, Gemini, atau Muse.</span>
+        <span>36 gaya · 20 pustaka &amp; skill · sampai 3 gaya dalam satu video</span>
       </footer>
     </div>
 
@@ -496,42 +496,42 @@
     <script>
       /* ================= DATA 36 GAYA ================= */
       var STYLES = [
-        { nama: "Pop-up Papercraft 3D Diorama", desc: "Dunia kertas karton berlapis dengan engsel, lipatan, dan tab penarik yang membuka seperti buku pop-up.", arahan: "elemen kertas berlapis yang terlipat membuka dengan engsel dan tab penarik", warna: ["#e8b04b", "#7fb069", "#4f9da6"] },
+        { nama: "Pop-up Papercraft 3D Diorama", desc: "Dunia dari kertas karton berlapis-lapis, lengkap dengan engsel, lipatan, dan tab penarik yang terbuka seperti buku pop-up.", arahan: "elemen kertas berlapis yang membuka lewat lipatan, engsel, dan tab penarik", warna: ["#e8b04b", "#7fb069", "#4f9da6"] },
         { nama: "Diorama Low Poly", desc: "Bentuk 3D sederhana dengan permukaan datar, tepi tegas, dan warna solid cerah.", arahan: "model low poly dengan permukaan flat-shaded dan warna solid", warna: ["#6ab04c", "#f2c14e", "#4a90d9"] },
-        { nama: "Dunia Mini Isometrik", desc: "Ruang dan kota mini yang dilihat dari sudut isometrik 45 derajat, rapi seperti maket.", arahan: "kamera isometrik 45 derajat di atas dunia miniatur yang rapi", warna: ["#ffd166", "#8ecae6", "#ef8354"] },
-        { nama: "Claymation Stop-Motion", desc: "Tokoh dan set dari plastisin dengan tekstur sidik jari dan gerakan patah-patah khas stop-motion.", arahan: "material plastisin bertekstur dengan animasi stop-motion 12 fps yang patah-patah", warna: ["#e07a5f", "#f2cc8f", "#81b29a"] },
-        { nama: "Dunia Voxel Balok", desc: "Seluruh objek tersusun dari kubus voxel, seperti dunia balok digital yang bisa dibongkar pasang.", arahan: "semua geometri dibangun dari kubus voxel berukuran seragam", warna: ["#58b368", "#d9a441", "#5b8e7d"] },
-        { nama: "Dunia Origami", desc: "Objek dari kertas lipat origami dengan lipatan tajam dan tekstur kertas yang halus.", arahan: "bentuk origami kertas dengan lipatan tajam dan bayangan lipatan yang lembut", warna: ["#f4f1de", "#e07a5f", "#3d405b"] },
-        { nama: "Mainan Kayu Klasik", desc: "Set dan tokoh seperti mainan kayu berukir dengan cat doff dan sambungan yang terlihat.", arahan: "material kayu berukir dengan cat doff dan sambungan mainan yang terlihat", warna: ["#b08968", "#dde5b6", "#7f5539"] },
-        { nama: "Balok Susun Plastik", desc: "Dunia dari balok mainan plastik warna-warni yang tersusun dan terkunci satu sama lain.", arahan: "balok plastik warna primer dengan stud bulat yang saling mengunci", warna: ["#e63946", "#ffd60a", "#4361ee"] },
+        { nama: "Dunia Mini Isometrik", desc: "Kota dan ruang mini yang dilihat dari sudut isometrik 45 derajat, tampilannya rapi seperti maket.", arahan: "kamera isometrik 45 derajat di atas dunia miniatur yang rapi", warna: ["#ffd166", "#8ecae6", "#ef8354"] },
+        { nama: "Claymation Stop-Motion", desc: "Tokoh dan set-nya terbuat dari plastisin, tekstur sidik jarinya masih terasa, gerakannya patah-patah khas stop-motion.", arahan: "material plastisin bertekstur dengan animasi stop-motion 12 fps yang patah-patah", warna: ["#e07a5f", "#f2cc8f", "#81b29a"] },
+        { nama: "Dunia Voxel Balok", desc: "Semua objeknya tersusun dari kubus-kubus voxel, seperti dunia balok digital yang bisa dibongkar pasang.", arahan: "semua geometri dibangun dari kubus voxel berukuran seragam", warna: ["#58b368", "#d9a441", "#5b8e7d"] },
+        { nama: "Dunia Origami", desc: "Objek-objeknya berbentuk lipatan origami, lipatannya tajam dan tekstur kertasnya halus.", arahan: "bentuk origami kertas dengan lipatan tajam dan bayangan lipatan yang lembut", warna: ["#f4f1de", "#e07a5f", "#3d405b"] },
+        { nama: "Mainan Kayu Klasik", desc: "Set dan tokohnya mirip mainan kayu ukiran, catnya doff dan sambungannya dibiarkan terlihat.", arahan: "material kayu berukir dengan cat doff dan sambungan mainan yang terlihat", warna: ["#b08968", "#dde5b6", "#7f5539"] },
+        { nama: "Balok Susun Plastik", desc: "Dunianya dibangun dari balok mainan plastik warna-warni yang saling mengunci satu sama lain.", arahan: "balok plastik warna primer dengan stud bulat yang saling mengunci", warna: ["#e63946", "#ffd60a", "#4361ee"] },
         { nama: "Kota Cyberpunk Neon", desc: "Kota malam futuristik dengan lampu neon, hologram iklan, dan pantulan jalan basah.", arahan: "kota malam dengan neon menyala, kabut tipis, dan pantulan basah di jalan", warna: ["#ff2e88", "#00e5ff", "#1a1a40"] },
-        { nama: "Retro Pixel 3D", desc: "Estetika game 3D era 90-an: tekstur pixelated, palet terbatas, dan model bersudut.", arahan: "tekstur pixelated resolusi rendah dan palet warna terbatas ala game 90-an", warna: ["#ffcf56", "#3e8914", "#2d5da1"] },
-        { nama: "Buku Cerita Cat Air", desc: "Tekstur cat air lembut dengan tepi yang melebur, seperti ilustrasi buku cerita anak.", arahan: "tekstur cat air lembut dengan tepi melebur dan kertas bergrain halus", warna: ["#a8dadc", "#f4a9b8", "#ffe5a0"] },
-        { nama: "Motion Graphic Datar 3D", desc: "Bentuk geometris datar dengan transisi geser, skala, dan putar yang ritmis mengikuti beat.", arahan: "bentuk geometris datar dengan transisi ritmis yang presisi", warna: ["#22223b", "#f2e9e4", "#c9ada7"] },
+        { nama: "Retro Pixel 3D", desc: "Nuansa game 3D tahun 90-an: teksturnya pixelated, palet warnanya terbatas, modelnya serba bersudut.", arahan: "tekstur pixelated resolusi rendah dan palet warna terbatas ala game 90-an", warna: ["#ffcf56", "#3e8914", "#2d5da1"] },
+        { nama: "Buku Cerita Cat Air", desc: "Tekstur cat air yang lembut dengan tepian melebur, persis ilustrasi buku cerita anak.", arahan: "tekstur cat air lembut dengan tepi melebur dan kertas bergrain halus", warna: ["#a8dadc", "#f4a9b8", "#ffe5a0"] },
+        { nama: "Motion Graphic Datar 3D", desc: "Bentuk-bentuk geometris datar yang bergeser, membesar-mengecil, dan berputar mengikuti irama beat.", arahan: "bentuk geometris datar dengan transisi ritmis yang presisi", warna: ["#22223b", "#f2e9e4", "#c9ada7"] },
         { nama: "Sinematik Realistis", desc: "Pencahayaan dan material fotorealistik bergaya film layar lebar.", arahan: "material fotorealistik, depth of field, dan grading warna film", warna: ["#606c38", "#283618", "#dda15e"] },
         { nama: "Anime Cel-Shaded", desc: "Render bergaya anime dengan bayangan datar bertingkat dan garis tepi yang tegas.", arahan: "cel shading dua tingkat dengan outline tegas dan warna anime yang bersih", warna: ["#ffafcc", "#a2d2ff", "#ffc8dd"] },
-        { nama: "Potongan Penampang (Cutaway)", desc: "Objek dibelah atau dibuka untuk menampilkan isi, lapisan, dan cara kerja di dalamnya.", arahan: "potongan penampang yang membuka lapisan dalam objek secara bertahap", warna: ["#f77f00", "#fcbf49", "#003049"] },
-        { nama: "Papan Tulis Hidup 3D", desc: "Sketsa kapur di papan tulis yang bangkit menjadi objek 3D berwarna.", arahan: "garis sketsa kapur yang berubah menjadi objek 3D penuh warna", warna: ["#2a5d43", "#f1fa8c", "#ffffff"] },
-        { nama: "Hologram Futuristik", desc: "Elemen hologram transparan bercahaya biru dengan antarmuka dan data digital melayang.", arahan: "hologram transparan bercahaya dengan panel antarmuka digital melayang", warna: ["#00b4d8", "#90e0ef", "#03045e"] },
-        { nama: "Dunia Bawah Laut", desc: "Adegan di bawah permukaan air: cahaya menembus bergelombang, gelembung, dan terumbu.", arahan: "cahaya caustic menembus air, gelembung naik, dan partikel melayang", warna: ["#0077b6", "#48cae4", "#ffb703"] },
-        { nama: "Penjelajahan Luar Angkasa", desc: "Planet, stasiun luar angkasa, dan objek melayang dalam gravitasi rendah.", arahan: "lingkungan luar angkasa dengan gerak melayang lambat dan bintang jauh", warna: ["#0b0c2a", "#7b2d8b", "#e0aaff"] },
-        { nama: "Tilt-Shift Miniatur Nyata", desc: "Dunia berskala nyata yang tampak seperti miniatur lewat fokus sempit tilt-shift.", arahan: "efek tilt-shift dengan fokus sempit di tengah dan blur di tepi atas bawah", warna: ["#8ac926", "#ffca3a", "#1982c4"] },
-        { nama: "Teater Bayangan Kertas", desc: "Siluet potongan kertas hitam bergerak di depan latar bercahaya, seperti pertunjukan bayangan.", arahan: "siluet kertas hitam berlapis dengan latar gradasi cahaya hangat", warna: ["#1b1b1b", "#e07a2f", "#f7d08a"] },
-        { nama: "Tipografi Kinetik 3D", desc: "Huruf dan kata 3D menjadi pemeran utama: jatuh, berputar, dan tersusun mengikuti narasi.", arahan: "tipografi 3D besar yang bergerak dan tersusun mengikuti irama narasi", warna: ["#ef476f", "#ffd166", "#118ab2"] },
-        { nama: "Infografik Data 3D", desc: "Diagram batang, garis, peta, dan angka yang tumbuh dari lantai dan bergerak menjelaskan data.", arahan: "grafik 3D yang tumbuh dan beranimasi selaras dengan angka yang disebutkan", warna: ["#06d6a0", "#118ab2", "#073b4c"] },
-        { nama: "Mesin dan Roda Gigi", desc: "Mekanisme roda gigi, tuas, piston, dan rantai yang bergerak presisi seperti jam raksasa.", arahan: "roda gigi dan mekanisme mekanik yang berputar presisi dan saling terkait", warna: ["#b08968", "#6c5849", "#f0ead2"] },
-        { nama: "Diorama Alam Dokumenter", desc: "Lanskap alam mini: hutan, sungai, dan satwa, diceritakan dengan gaya film dokumenter alam.", arahan: "lanskap alam miniatur detail dengan gerak kamera dokumenter yang tenang", warna: ["#386641", "#6a994e", "#a7c957"] },
-        { nama: "Tur Terbang Kota", desc: "Kamera terbang menyusuri jalan, gedung, dan landmark kota seperti rekaman drone.", arahan: "jalur kamera terbang mulus menyusuri kota dari udara", warna: ["#457b9d", "#a8dadc", "#e63946"] },
+        { nama: "Potongan Penampang (Cutaway)", desc: "Objeknya dibelah atau dibuka supaya kelihatan isi, lapisan, dan cara kerjanya di dalam.", arahan: "potongan penampang yang membuka lapisan dalam objek sedikit demi sedikit", warna: ["#f77f00", "#fcbf49", "#003049"] },
+        { nama: "Papan Tulis Hidup 3D", desc: "Sketsa kapur di papan tulis yang tiba-tiba hidup dan berubah jadi objek 3D berwarna.", arahan: "garis sketsa kapur yang berubah menjadi objek 3D penuh warna", warna: ["#2a5d43", "#f1fa8c", "#ffffff"] },
+        { nama: "Hologram Futuristik", desc: "Elemen hologram transparan bercahaya biru, dengan panel antarmuka dan data digital yang melayang-layang.", arahan: "hologram transparan bercahaya dengan panel antarmuka digital melayang", warna: ["#00b4d8", "#90e0ef", "#03045e"] },
+        { nama: "Dunia Bawah Laut", desc: "Suasana di bawah permukaan air: cahaya menembus bergelombang, gelembung naik, dan terumbu karang di dasar.", arahan: "cahaya caustic menembus air, gelembung naik, dan partikel melayang", warna: ["#0077b6", "#48cae4", "#ffb703"] },
+        { nama: "Penjelajahan Luar Angkasa", desc: "Planet, stasiun luar angkasa, dan benda-benda yang melayang pelan dalam gravitasi rendah.", arahan: "lingkungan luar angkasa dengan gerak melayang lambat dan bintang jauh", warna: ["#0b0c2a", "#7b2d8b", "#e0aaff"] },
+        { nama: "Tilt-Shift Miniatur Nyata", desc: "Dunia skala nyata yang terlihat seperti miniatur berkat fokus sempit ala tilt-shift.", arahan: "efek tilt-shift dengan fokus sempit di tengah dan blur di tepi atas bawah", warna: ["#8ac926", "#ffca3a", "#1982c4"] },
+        { nama: "Teater Bayangan Kertas", desc: "Siluet potongan kertas hitam yang bergerak di depan latar bercahaya, mirip pertunjukan wayang bayangan.", arahan: "siluet kertas hitam berlapis dengan latar gradasi cahaya hangat", warna: ["#1b1b1b", "#e07a2f", "#f7d08a"] },
+        { nama: "Tipografi Kinetik 3D", desc: "Huruf dan kata 3D jadi pemeran utamanya: jatuh, berputar, lalu tersusun mengikuti alur narasi.", arahan: "tipografi 3D besar yang bergerak dan tersusun mengikuti irama narasi", warna: ["#ef476f", "#ffd166", "#118ab2"] },
+        { nama: "Infografik Data 3D", desc: "Diagram batang, garis, peta, dan angka-angka yang tumbuh dari lantai sambil bergerak menjelaskan data.", arahan: "grafik 3D yang tumbuh dan bergerak mengikuti angka yang sedang disebutkan", warna: ["#06d6a0", "#118ab2", "#073b4c"] },
+        { nama: "Mesin dan Roda Gigi", desc: "Roda gigi, tuas, piston, dan rantai yang bergerak presisi seperti mesin jam raksasa.", arahan: "roda gigi dan mekanisme mekanik yang berputar presisi dan saling terkait", warna: ["#b08968", "#6c5849", "#f0ead2"] },
+        { nama: "Diorama Alam Dokumenter", desc: "Lanskap alam versi mini, ada hutan, sungai, dan satwanya, diceritakan dengan gaya film dokumenter alam.", arahan: "lanskap alam miniatur yang detail, dengan gerak kamera dokumenter yang tenang", warna: ["#386641", "#6a994e", "#a7c957"] },
+        { nama: "Tur Terbang Kota", desc: "Kamera terbang menyusuri jalanan, gedung, dan landmark kota, persis seperti rekaman drone.", arahan: "jalur kamera terbang mulus menyusuri kota dari udara", warna: ["#457b9d", "#a8dadc", "#e63946"] },
         { nama: "Pameran Produk 360", desc: "Produk berputar di atas panggung dengan sorotan fitur dan label yang muncul satu per satu.", arahan: "panggung putar 360 derajat dengan sorotan fitur dan label melayang", warna: ["#edf2f4", "#8d99ae", "#ef233c"] },
-        { nama: "Visualisasi Arsitektur", desc: "Bangunan tumbuh lantai demi lantai dari denah, lengkap dengan material dan lanskap.", arahan: "bangunan yang merakit diri lantai demi lantai dari garis denah", warna: ["#dee2e6", "#6c757d", "#4361ee"] },
-        { nama: "Pulau Melayang Fantasi", desc: "Pulau-pulau melayang di langit dengan air terjun yang jatuh ke awan dan jembatan tali.", arahan: "pulau melayang di atas awan dengan air terjun jatuh ke langit", warna: ["#74c69d", "#95d5b2", "#40916c"] },
+        { nama: "Visualisasi Arsitektur", desc: "Bangunannya tumbuh lantai demi lantai dari denah, lengkap dengan material dan lanskapnya.", arahan: "bangunan yang merakit dirinya sendiri lantai demi lantai dari garis denah", warna: ["#dee2e6", "#6c757d", "#4361ee"] },
+        { nama: "Pulau Melayang Fantasi", desc: "Pulau-pulau melayang di langit dengan air terjun yang jatuh ke awan dan jembatan tali.", arahan: "pulau melayang di atas awan, air terjunnya jatuh menembus awan", warna: ["#74c69d", "#95d5b2", "#40916c"] },
         { nama: "Diorama Museum Klasik", desc: "Set miniatur bergaya etalase museum: alas kayu, label kecil, dan lampu sorot hangat.", arahan: "etalase museum dengan alas kayu, label adegan, dan lampu sorot hangat", warna: ["#774936", "#d6ccc2", "#9c6644"] },
-        { nama: "Papan Kapur Sekolah", desc: "Gambar kapur warna-warni di papan hijau yang beranimasi menjadi adegan 3D sederhana.", arahan: "ilustrasi kapur warna di papan hijau yang hidup menjadi adegan 3D", warna: ["#2a5d43", "#ffd60a", "#ff70a6"] },
-        { nama: "Blueprint Kawat Bercahaya", desc: "Garis rancangan biru bercahaya merakit objek dari kerangka kawat menjadi bentuk utuh.", arahan: "kerangka kawat blueprint bercahaya yang terisi menjadi objek solid", warna: ["#023e8a", "#00b4d8", "#caf0f8"] },
-        { nama: "Pastel Kawaii Lembut", desc: "Bentuk bulat lembut, warna pastel, dan wajah menggemaskan pada tokoh dan properti.", arahan: "bentuk bulat super lembut, warna pastel, dan ekspresi kawaii", warna: ["#ffc8dd", "#bde0fe", "#a2d2ff"] },
+        { nama: "Papan Kapur Sekolah", desc: "Gambar kapur warna-warni di papan hijau yang hidup dan berubah jadi adegan 3D sederhana.", arahan: "ilustrasi kapur warna di papan hijau yang hidup menjadi adegan 3D", warna: ["#2a5d43", "#ffd60a", "#ff70a6"] },
+        { nama: "Blueprint Kawat Bercahaya", desc: "Garis rancangan biru yang bercahaya merakit objek, dari kerangka kawat sampai jadi bentuk utuh.", arahan: "kerangka kawat blueprint bercahaya yang terisi menjadi objek solid", warna: ["#023e8a", "#00b4d8", "#caf0f8"] },
+        { nama: "Pastel Kawaii Lembut", desc: "Bentuknya bulat-bulat lembut, warnanya pastel, tokoh dan propertinya berwajah menggemaskan.", arahan: "bentuk bulat super lembut, warna pastel, dan ekspresi kawaii", warna: ["#ffc8dd", "#bde0fe", "#a2d2ff"] },
         { nama: "Sinematik Gelap Dramatis", desc: "Kontras tinggi, kabut, dan satu sumber cahaya dramatis yang membentuk siluet kuat.", arahan: "pencahayaan kontras tinggi dengan kabut dan satu cahaya kunci dramatis", warna: ["#0d1b2a", "#e0e1dd", "#fca311"] },
-        { nama: "Perjalanan Waktu Sejarah", desc: "Satu lokasi yang berubah melewati zaman: masa lalu, masa kini, dalam satu jalur kamera.", arahan: "lokasi yang sama bertransformasi melewati beberapa era sejarah", warna: ["#9c6644", "#606c38", "#283618"] },
-        { nama: "Hamparan AR (Augmented Reality)", desc: "Objek 3D virtual menempel di atas dunia nyata dengan penanda dan panel data digital.", arahan: "objek virtual menempel di lingkungan nyata dengan penanda AR dan panel data", warna: ["#00f5d4", "#fee440", "#9b5de5"] }
+        { nama: "Perjalanan Waktu Sejarah", desc: "Satu lokasi yang sama berubah melewati zaman, dari masa lalu sampai masa kini, dalam satu jalur kamera.", arahan: "lokasi yang sama berubah-ubah melewati beberapa zaman", warna: ["#9c6644", "#606c38", "#283618"] },
+        { nama: "Hamparan AR (Augmented Reality)", desc: "Objek 3D virtual yang menempel di dunia nyata, lengkap dengan penanda dan panel data digital.", arahan: "objek virtual menempel di lingkungan nyata dengan penanda AR dan panel data", warna: ["#00f5d4", "#fee440", "#9b5de5"] }
       ];
 
       /* ================= CONTOH GAMBAR TIAP GAYA (SVG) ================= */
@@ -955,26 +955,26 @@
 
       /* ================= DATA 20 PUSTAKA & SKILL ================= */
       var TOOLS = [
-        { nama: "Motion", kategori: "Animasi & Gerak", desc: "Pustaka animasi modern untuk web: easing, spring, dan timeline gerakan yang halus untuk elemen UI dan adegan.", peran: "animasi elemen dan transisi adegan dengan easing dan spring yang halus", url: "https://github.com/motiondivision/motion" },
-        { nama: "Motion Design Skill (LottieFiles)", kategori: "Skill AI", desc: "Skill resmi LottieFiles yang mengajarkan agent AI prinsip motion design: timing, easing, dan koreografi gerakan.", peran: "panduan prinsip motion design (timing, easing, koreografi gerakan) untuk agent", url: "https://github.com/LottieFiles/motion-design-skill" },
-        { nama: "Remotion Skills", kategori: "Skill AI", desc: "Kumpulan skill resmi Remotion agar agent AI bisa menyusun video programatik berbasis React dengan benar.", peran: "panduan resmi agar agent menyusun video Remotion dengan pola yang benar", url: "https://github.com/remotion-dev/skills" },
-        { nama: "Hairline Skills", kategori: "Skill AI", desc: "Kumpulan skill desain dan animasi dari Hairline untuk membantu agent menghasilkan gerakan dan tata letak yang rapi.", peran: "skill desain dan animasi pendukung untuk agent", url: "https://hairline.lucasmarkes.com/skills" },
-        { nama: "Anatomy Skill", kategori: "Skill AI", desc: "Skill yang memetakan anatomi sebuah adegan atau komposisi, supaya struktur visualnya jelas sebelum dianimasikan.", peran: "memetakan anatomi dan struktur komposisi adegan sebelum dianimasikan", url: "https://skills.wheresryan.sh/anatomy" },
-        { nama: "Anatomy Reveal Skill", kategori: "Skill AI", desc: "Skill untuk adegan reveal anatomi: membuka lapisan objek satu per satu, cocok untuk video edukasi sains dan kesehatan.", peran: "adegan reveal anatomi yang membuka lapisan objek satu per satu", url: "https://www.typingmind.com/skills/annnguyentt-anatomy-reveal" },
-        { nama: "Blender", kategori: "3D & Efek", desc: "Software 3D open-source lengkap: modeling, rigging, animasi, dan render untuk aset atau adegan yang lebih kompleks.", peran: "modeling dan render aset 3D kompleks yang tidak praktis dibuat langsung di kode", url: "https://github.com/blender/blender" },
-        { nama: "Three.js", kategori: "3D & Efek", desc: "Pustaka 3D utama untuk web berbasis WebGL. Semua adegan video di generator ini dibangun dengan Three.js.", peran: "mesin utama pembangunan scene 3D, model, material, pencahayaan, dan kamera", url: "https://github.com/mrdoob/three.js", bawaan: true },
+        { nama: "Motion", kategori: "Animasi & Gerak", desc: "Pustaka animasi modern untuk web, dengan easing, spring, dan timeline yang bikin gerakan elemen UI dan adegan terasa halus.", peran: "menggerakkan elemen dan transisi adegan dengan easing dan spring yang halus", url: "https://github.com/motiondivision/motion" },
+        { nama: "Motion Design Skill (LottieFiles)", kategori: "Skill AI", desc: "Skill resmi dari LottieFiles yang mengajarkan prinsip motion design ke agent AI: soal timing, easing, dan koreografi gerakan.", peran: "jadi panduan agent soal prinsip motion design: timing, easing, dan koreografi gerakan", url: "https://github.com/LottieFiles/motion-design-skill" },
+        { nama: "Remotion Skills", kategori: "Skill AI", desc: "Kumpulan skill resmi Remotion supaya agent AI bisa menyusun video programatik berbasis React dengan cara yang benar.", peran: "panduan resmi supaya agent menyusun video Remotion mengikuti pola yang benar", url: "https://github.com/remotion-dev/skills" },
+        { nama: "Hairline Skills", kategori: "Skill AI", desc: "Kumpulan skill desain dan animasi dari Hairline yang membantu agent menghasilkan gerakan dan tata letak yang rapi.", peran: "skill pendukung agent untuk urusan desain dan animasi", url: "https://hairline.lucasmarkes.com/skills" },
+        { nama: "Anatomy Skill", kategori: "Skill AI", desc: "Skill untuk memetakan anatomi sebuah adegan atau komposisi, supaya struktur visualnya jelas sebelum mulai dianimasikan.", peran: "memetakan anatomi dan struktur komposisi adegan sebelum dianimasikan", url: "https://skills.wheresryan.sh/anatomy" },
+        { nama: "Anatomy Reveal Skill", kategori: "Skill AI", desc: "Skill khusus adegan reveal anatomi, membuka lapisan objek satu per satu. Cocok banget untuk video edukasi sains dan kesehatan.", peran: "adegan reveal anatomi yang membuka lapisan objek satu per satu", url: "https://www.typingmind.com/skills/annnguyentt-anatomy-reveal" },
+        { nama: "Blender", kategori: "3D & Efek", desc: "Software 3D open-source yang lengkap: modeling, rigging, animasi, sampai render, untuk aset atau adegan yang lebih rumit.", peran: "modeling dan render aset 3D rumit yang kurang praktis kalau dibuat langsung dari kode", url: "https://github.com/blender/blender" },
+        { nama: "Three.js", kategori: "3D & Efek", desc: "Pustaka 3D utama untuk web berbasis WebGL. Semua adegan video di generator ini dibangun dengan Three.js.", peran: "mesin utama untuk membangun scene 3D: model, material, pencahayaan, dan kamera", url: "https://github.com/mrdoob/three.js", bawaan: true },
         { nama: "React Three Rapier", kategori: "3D & Efek", desc: "Mesin fisika Rapier untuk React Three Fiber: gravitasi, tumbukan, dan rigid body di dalam adegan 3D.", peran: "simulasi fisika (gravitasi, tumbukan, rigid body) di dalam adegan 3D", url: "https://github.com/pmndrs/react-three-rapier" },
         { nama: "React Postprocessing", kategori: "3D & Efek", desc: "Efek post-processing untuk React Three Fiber: bloom, depth of field, vignette, dan grading akhir.", peran: "efek post-processing seperti bloom, depth of field, dan vignette", url: "https://github.com/pmndrs/react-postprocessing" },
         { nama: "three.quarks", kategori: "3D & Efek", desc: "Sistem partikel berperforma tinggi untuk Three.js: asap, percikan, hujan, gelembung, dan efek partikel lain.", peran: "efek partikel seperti asap, percikan, hujan, dan gelembung", url: "https://github.com/Alchemist0823/three.quarks" },
-        { nama: "Tweakpane", kategori: "3D & Efek", desc: "Panel kontrol parameter yang ringkas untuk mengatur nilai adegan secara langsung saat proses tuning dan debug.", peran: "panel kontrol untuk men-tuning parameter adegan secara langsung", url: "https://github.com/cocopon/tweakpane" },
-        { nama: "GSAP", kategori: "Animasi & Gerak", desc: "Pustaka animasi profesional dari GreenSock: timeline presisi, ScrollTrigger, dan kontrol gerakan tingkat lanjut.", peran: "timeline animasi presisi dan sinkronisasi gerakan antar elemen", url: "https://github.com/greensock/GSAP", bawaan: true },
+        { nama: "Tweakpane", kategori: "3D & Efek", desc: "Panel kontrol parameter yang ringkas, buat mengatur nilai-nilai adegan secara langsung saat tuning dan debug.", peran: "panel kontrol buat mengatur parameter adegan secara langsung", url: "https://github.com/cocopon/tweakpane" },
+        { nama: "GSAP", kategori: "Animasi & Gerak", desc: "Pustaka animasi profesional dari GreenSock: timeline presisi, ScrollTrigger, dan kontrol gerakan tingkat lanjut.", peran: "timeline animasi yang presisi dan menyinkronkan gerakan antar elemen", url: "https://github.com/greensock/GSAP", bawaan: true },
         { nama: "Remotion", kategori: "Video & Audio", desc: "Framework membuat video secara programatik dengan React: komposisi, teks, dan render MP4 dari kode.", peran: "komposisi dan render video programatik berbasis React", url: "https://github.com/remotion-dev/remotion" },
         { nama: "Manim", kategori: "Video & Audio", desc: "Mesin animasi Python dari komunitas Manim untuk animasi matematika dan penjelasan konsep yang presisi.", peran: "animasi matematika dan diagram konsep yang presisi", url: "https://github.com/ManimCommunity/manim" },
         { nama: "Lottie Web", kategori: "Animasi & Gerak", desc: "Pemutar animasi Lottie dari Airbnb: menjalankan animasi vektor JSON (dari After Effects/Bodymovin) di web.", peran: "memutar animasi vektor Lottie (ikon, logo, elemen UI) di dalam adegan", url: "https://github.com/airbnb/lottie-web" },
-        { nama: "Openverse API", kategori: "Video & Audio", desc: "API katalog aset bebas lisensi dari WordPress: jutaan gambar dan audio open-license untuk materi pendukung.", peran: "sumber gambar dan audio bebas lisensi untuk materi pendukung", url: "https://api.openverse.org/v1/" },
-        { nama: "librosa", kategori: "Video & Audio", desc: "Pustaka Python untuk analisis musik dan audio: beat tracking, tempo, dan fitur audio untuk sinkronisasi visual.", peran: "analisis audio dan beat tracking agar gerakan visual selaras dengan musik", url: "https://github.com/librosa/librosa" },
-        { nama: "WhisperX", kategori: "Video & Audio", desc: "Transkripsi suara presisi berbasis Whisper dengan alignment per kata, untuk subtitle yang akurat dan tepat waktu.", peran: "transkripsi narasi dan pembuatan subtitle dengan timing per kata", url: "https://github.com/m-bain/whisperX" },
-        { nama: "FFmpeg", kategori: "Video & Audio", desc: "Perkakas multimedia serbaguna: menggabungkan frame dan audio, encode, dan render file video final.", peran: "penggabungan frame dan audio serta encode file video final", url: "https://github.com/FFmpeg/FFmpeg", bawaan: true }
+        { nama: "Openverse API", kategori: "Video & Audio", desc: "API katalog aset bebas lisensi dari WordPress, isinya jutaan gambar dan audio berlisensi terbuka untuk materi pendukung.", peran: "sumber gambar dan audio bebas lisensi untuk materi pendukung", url: "https://api.openverse.org/v1/" },
+        { nama: "librosa", kategori: "Video & Audio", desc: "Pustaka Python untuk analisis musik dan audio: beat tracking, tempo, dan fitur audio untuk sinkronisasi visual.", peran: "menganalisis audio dan melacak beat supaya gerakan visualnya selaras dengan musik", url: "https://github.com/librosa/librosa" },
+        { nama: "WhisperX", kategori: "Video & Audio", desc: "Transkripsi suara berbasis Whisper yang presisi, lengkap dengan alignment per kata, supaya subtitle-nya akurat dan pas waktunya.", peran: "mentranskrip narasi dan membuat subtitle dengan timing per kata", url: "https://github.com/m-bain/whisperX" },
+        { nama: "FFmpeg", kategori: "Video & Audio", desc: "Perkakas multimedia serbaguna: menggabungkan frame dan audio, encode, dan render file video final.", peran: "menggabungkan frame dan audio lalu meng-encode file video finalnya", url: "https://github.com/FFmpeg/FFmpeg", bawaan: true }
       ];
       var KATEGORI_TOOL = ["Skill AI", "Animasi & Gerak", "3D & Efek", "Video & Audio"];
 
@@ -1056,64 +1056,64 @@
         var speaker = el("speaker").value;
 
         var baris = [];
-        baris.push("Buat video 3D lengkap menggunakan Three.js berdasarkan spesifikasi di bawah ini. Susun dulu naskah dan storyboard, bangun setiap adegan sebagai scene 3D sungguhan, lalu render sampai menjadi file video final. Kerjakan uji kreatif singkat pada satu adegan untuk persetujuan saya sebelum render penuh.");
+        baris.push("Tolong buatkan video 3D lengkap pakai Three.js, mengikuti rincian di bawah ini. Mulai dari menyusun naskah dan storyboard dulu, lalu bangun tiap adegannya sebagai scene 3D sungguhan, dan render sampai jadi file video final. Sebelum render penuh, buatkan dulu contoh singkat dari satu adegan untuk saya setujui.");
         baris.push("");
         baris.push("JUDUL / TOPIK");
-        baris.push(judul || "[ISI JUDUL ATAU TOPIK VIDEO]");
+        baris.push(judul || "[tulis judul atau topik videonya di sini]");
         baris.push("");
         baris.push("TARGET PENONTON DAN TUJUAN");
-        baris.push(target || "[ISI SIAPA PENONTONNYA DAN APA YANG HARUS MEREKA PAHAMI ATAU RASAKAN]");
+        baris.push(target || "[tulis siapa penontonnya dan apa yang ingin mereka pahami atau rasakan setelah menonton]");
         baris.push("");
         baris.push("GAYA VISUAL");
         baris.push("- Gaya utama: " + utama.nama + " — " + utama.arahan + ".");
         pendukung.forEach(function (s, i) {
-          baris.push("- Gaya pendukung " + (i + 1) + ": " + s.nama + " — " + s.arahan + " (dipakai sebagai aksen, jangan mengalahkan gaya utama).");
+          baris.push("- Gaya pendukung " + (i + 1) + ": " + s.nama + " — " + s.arahan + " (cukup jadi aksen saja, jangan sampai mengalahkan gaya utama).");
         });
-        if (!pendukung.length) baris.push("- Tanpa gaya pendukung; fokus penuh pada gaya utama.");
+        if (!pendukung.length) baris.push("- Tidak ada gaya pendukung, fokus saja ke gaya utama.");
         baris.push("");
         baris.push("SUMBER MATERI");
         if (sumber.length) {
-          baris.push("Saya akan melampirkan: " + sumber.join(", ") + ". Gunakan materi lampiran sebagai sumber utama isi video dan jangan mengarang fakta di luar materi itu.");
+          baris.push("Saya lampirkan juga: " + sumber.join(", ") + ". Jadikan materi lampiran itu sumber utama isi videonya, dan jangan mengarang fakta di luar materi tersebut.");
         } else {
-          baris.push("Hanya topik. Susun naskah, urutan adegan, dan materi visual dari topik di atas.");
+          baris.push("Saya cuma punya topik. Tolong susun sendiri naskah, urutan adegan, dan materi visualnya dari topik di atas.");
         }
         baris.push("");
         baris.push("FORMAT VIDEO");
         baris.push("- Rasio aspek: " + aspekLabel);
         baris.push("- Resolusi: " + dims[0] + " × " + dims[1] + " (" + resKey + ")");
-        baris.push("- Durasi: " + (total ? formatDurasi(total) : "[ISI DURASI]"));
+        baris.push("- Durasi: " + (total ? formatDurasi(total) : "[tulis durasinya di sini]"));
         baris.push("- Frame rate: " + fps + " fps");
         baris.push("- Bahasa video (narasi dan teks di layar): " + bahasa);
         if (vo === "tts") {
-          baris.push("- Voice-over: buat otomatis dengan text-to-speech, suara " + speaker.toLowerCase() + ". Sinkronkan narasi dengan adegan dan tampilkan subtitle " + bahasa + ".");
+          baris.push("- Voice-over: buatkan otomatis lewat text-to-speech dengan suara " + speaker.toLowerCase() + ". Samakan timing narasinya dengan adegan, dan tampilkan subtitle " + bahasa + ".");
         } else if (vo === "sendiri") {
-          baris.push("- Voice-over: siapkan naskah narasi per adegan dengan penanda waktu; audio akan saya rekam sendiri. Tampilkan subtitle " + bahasa + ".");
+          baris.push("- Voice-over: siapkan naskah narasinya per adegan lengkap dengan penanda waktu, audionya nanti saya rekam sendiri. Tetap tampilkan subtitle " + bahasa + ".");
         } else {
-          baris.push("- Voice-over: tidak ada. Gunakan musik latar dan teks di layar dalam " + bahasa + " untuk menyampaikan isi.");
+          baris.push("- Voice-over: tidak perlu. Sampaikan isinya lewat musik latar dan teks di layar dalam " + bahasa + ".");
         }
         baris.push("");
         baris.push("ARAH VISUAL");
-        baris.push("- Suasana: " + (el("suasana").value.trim() || "menyesuaikan topik dan target penonton"));
+        baris.push("- Suasana: " + (el("suasana").value.trim() || "sesuaikan dengan topik dan target penontonnya"));
         baris.push("- Palet warna: " + el("palet").value.toLowerCase());
         baris.push("- Gerakan kamera: " + el("kamera").value.toLowerCase());
-        baris.push("- Adegan, properti, atau aksi wajib: " + (el("adeganWajib").value.trim() || "tidak ada ketentuan khusus"));
+        baris.push("- Adegan, properti, atau aksi wajib: " + (el("adeganWajib").value.trim() || "tidak ada, bebas berkreasi"));
         baris.push("");
         baris.push("TOOLKIT PRODUKSI");
         var toolsDipilih = [];
         document.querySelectorAll(".tool-check:checked").forEach(function (c) { toolsDipilih.push(TOOLS[parseInt(c.value, 10)]); });
         if (toolsDipilih.length) {
-          baris.push("Gunakan skill dan pustaka berikut, masing-masing sesuai tugasnya:");
+          baris.push("Pakai skill dan pustaka berikut ini, masing-masing sesuai tugasnya:");
           toolsDipilih.forEach(function (t) { baris.push("- " + t.nama + ": " + t.peran + "."); });
         } else {
-          baris.push("Tidak ada toolkit khusus yang ditentukan; gunakan Three.js sebagai mesin 3D utama dan FFmpeg untuk render final.");
+          baris.push("Tidak ada toolkit khusus yang saya tentukan. Pakai Three.js sebagai mesin 3D utamanya dan FFmpeg untuk render final.");
         }
         baris.push("");
         baris.push("LANGKAH PRODUKSI");
-        baris.push("1. Tulis naskah narasi dan bagi menjadi adegan-adegan sesuai durasi total.");
-        baris.push("2. Bangun setiap adegan sebagai scene Three.js: model 3D, material, pencahayaan, dan animasi subjek. Bukan slideshow gambar diam.");
-        baris.push("3. Gerakkan kamera mengikuti jalur (camera path) yang halus dan sinematik sesuai arahan di atas.");
+        baris.push("1. Tulis naskah narasinya, lalu bagi jadi adegan-adegan mengikuti durasi totalnya.");
+        baris.push("2. Bangun tiap adegan sebagai scene Three.js beneran: model 3D, material, pencahayaan, dan subjeknya bergerak. Bukan slideshow gambar diam.");
+        baris.push("3. Gerakkan kameranya mengikuti jalur (camera path) yang halus dan sinematik, sesuai arahan di atas.");
         baris.push("4. Render frame demi frame, lalu gabungkan dengan audio menjadi satu file MP4 sesuai format video di atas.");
-        baris.push("5. Periksa hasil akhir (durasi, resolusi, sinkronisasi audio dan subtitle) sebelum mengirim file final.");
+        baris.push("5. Terakhir, cek lagi hasil akhirnya (durasi, resolusi, sinkronnya audio dan subtitle) sebelum mengirim file finalnya.");
 
         return {
           teks: baris.join("\n"),
@@ -1130,7 +1130,7 @@
         var hasil = susunPrompt();
         el("platformName").textContent = hasil.platform;
         el("promptBox").textContent = hasil.teks;
-        el("pasteHint").textContent = "Tempel prompt ini di " + hasil.platform + ", lalu ikuti proses produksinya sampai file video selesai dirender.";
+        el("pasteHint").textContent = "Tinggal tempel prompt ini di " + hasil.platform + ", lalu ikuti prosesnya sampai file videonya selesai dibuat.";
 
         var chips = el("chips");
         chips.innerHTML = "";
@@ -1164,17 +1164,17 @@
         if (!el("judul").value.trim()) kurang.push("Judul atau topik");
         if (!el("target").value.trim()) kurang.push("Target penonton dan tujuan");
         if (!hasil.total) kurang.push("Durasi");
-        el("missingNote").textContent = kurang.length ? "Masih kosong: " + kurang.join(", ") + ". Prompt tetap bisa disalin, bagian itu akan tampil sebagai tanda kurung." : "";
+        el("missingNote").textContent = kurang.length ? "Yang masih kosong: " + kurang.join(", ") + ". Prompt-nya tetap bisa disalin kok, bagian yang kosong akan muncul sebagai tanda kurung untuk kamu isi sendiri." : "";
 
         var hint = el("durasiHint");
         if (hasil.total > 1800) {
-          hint.textContent = "Terlalu panjang: batas maksimal 30 menit (1.800 detik).";
+          hint.textContent = "Kepanjangan, durasi maksimalnya 30 menit (1.800 detik).";
           hint.classList.add("warn");
         } else if (hasil.total > 0) {
-          hint.textContent = "Total " + formatDurasi(hasil.total) + ". Batas: 1 detik hingga 30 menit.";
+          hint.textContent = "Totalnya " + formatDurasi(hasil.total) + ". Boleh dari 1 detik sampai 30 menit.";
           hint.classList.remove("warn");
         } else {
-          hint.textContent = "1 detik hingga 30 menit.";
+          hint.textContent = "Bisa dari 1 detik sampai 30 menit.";
           hint.classList.remove("warn");
         }
 
@@ -1197,7 +1197,7 @@
           card.setAttribute("data-index", i);
           var dots = s.warna.map(function (w) { return '<span class="dot" style="background:' + w + '"></span>'; }).join("");
           card.innerHTML = '<div class="style-thumb">' + svgGaya(i, "g" + i) + "</div><h3>" + s.nama + '</h3><div class="dots">' + dots + "</div><p>" + s.desc + '</p>' +
-            '<span class="in-use" style="display:none">Sedang dipakai sebagai gaya utama</span>' +
+            '<span class="in-use" style="display:none">Sedang dipakai jadi gaya utama</span>' +
             '<button type="button" class="btn ghost small pakai-btn">Pakai gaya ini</button>';
           card.querySelector(".pakai-btn").addEventListener("click", function () {
             gayaUtama.value = i;
